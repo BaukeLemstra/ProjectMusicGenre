@@ -33,15 +33,15 @@ def generate_csv():
             zcr = librosa.feature.zero_crossing_rate(y)
             mfcc = librosa.feature.mfcc(y=y, sr=sr)
             rms = librosa.feature.rms(y=y)
-            to_append = f'{filename} {np.mean(chroma_stft)} {np.mean(rms)} {np.mean(spec_cent)} {np.mean(
-                spec_bw)} {np.mean(rolloff)} {np.mean(zcr)}'
+            to_append = f'{filename} {np.mean(chroma_stft)} {np.mean(rms)} {np.mean(spec_cent)}' \
+                f' {np.mean(spec_bw)} {np.mean(rolloff)} {np.mean(zcr)}'
             for e in mfcc:
                 to_append += f' {np.mean(e)}'
             to_append += f' {g}'
             file = open('data.csv', 'a', newline='')
             with file:
                 writer = csv.writer(file)
-                writer.writerow(to_append.split())
+            writer.writerow(to_append.split())
 
 
 def main():
