@@ -1,4 +1,4 @@
-from Gui import Gui
+from gui.Gui import Gui
 
 gui = Gui()
 gui.run()

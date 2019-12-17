@@ -1,8 +1,8 @@
 import winsound
 from tkinter import *
 
-from mp3_wav_util import mp3_to_wav
-from upload_sound_file import let_user_select_file
+from utils.mp3_wav_util import mp3_to_wav
+from utils.upload_sound_file import let_user_select_file
 
 
 class Gui:
@@ -16,9 +16,7 @@ class Gui:
         self.bottomFrame.pack(side=BOTTOM)
 
         button1 = Button(self.topFrame, text="Selecteer Audiobestand", fg="green", command=self.recieve_user_sound_file)
-        button2 = Button(self.topFrame, text="Quit", fg="red", command=self.quit)
         button1.pack()
-        button2.pack()
 
         self.label = Label(self.root, text="Huidig geselecteerd audiobestand: Geen")
         self.label.pack()
@@ -26,11 +24,10 @@ class Gui:
         # init for vars
         self.current_sound_file = None
 
+        self.root.protocol("WM_DELETE_WINDOW", self._delete_window)
+
     def run(self):
         self.root.mainloop()
-
-    def quit(self):
-        self.root.destroy()
 
     def recieve_user_sound_file(self):
         user_selected_file = let_user_select_file()
@@ -47,12 +44,21 @@ class Gui:
 
             button3 = Button(self.topFrame, text="Afspelen", fg="red", command=self.play)
             button3.pack()
+            button3 = Button(self.topFrame, text="Stop", fg="red", command=self.stop)
+            button3.pack()
 
         else:
             self.popupmsg("Selecteer een mp3 of een wav bestand.")
 
     def play(self):
         winsound.PlaySound(self.current_sound_file, winsound.SND_ASYNC)
+
+    def stop(self):
+        winsound.PlaySound(None, winsound.SND_PURGE)
+
+    def _delete_window(self):
+        self.root.destroy()
+        winsound.PlaySound(None, winsound.SND_PURGE)
 
     @staticmethod
     def get_selected_file():

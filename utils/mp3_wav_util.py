@@ -6,7 +6,8 @@ def mp3_to_wav(file_path):
 
     split = file_path.split("/")
     filename = split[-1]
-    final_path = "converted/{}".format(filename)
+    filename = filename.replace(".mp3", ".wav")
+    final_path = "wav_files/{}".format(filename)
 
     sound.export(final_path, format="wav")
     return final_path
