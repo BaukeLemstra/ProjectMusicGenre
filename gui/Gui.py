@@ -10,6 +10,9 @@ class Gui:
         # init for Gui
         self.root = Tk()
 
+        self.root.geometry("800x600")
+        self.root.title("Muziek genre herkenner")
+
         self.topFrame = Frame(self.root)
         self.topFrame.pack()
         self.bottomFrame = Frame(self.root)

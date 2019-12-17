@@ -70,6 +70,8 @@ def main():
 
     results = model.evaluate(X_test, y_test)
 
+    model.save('genre_model.h5')
+
 
 if __name__ == "__main__":
     main()
