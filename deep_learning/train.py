@@ -25,6 +25,7 @@ def generate_csv():
     for g in genres:
         for filename in os.listdir(f'./MIR/genres/{g}'):
             songname = f'./MIR/genres/{g}/{filename}'
+
             y, sr = librosa.load(songname, mono=True, duration=30)
             chroma_stft = librosa.feature.chroma_stft(y=y, sr=sr)
             spec_cent = librosa.feature.spectral_centroid(y=y, sr=sr)
@@ -33,6 +34,7 @@ def generate_csv():
             zcr = librosa.feature.zero_crossing_rate(y)
             mfcc = librosa.feature.mfcc(y=y, sr=sr)
             rms = librosa.feature.rms(y=y)
+
             to_append = f'{filename} {np.mean(chroma_stft)} {np.mean(rms)} {np.mean(spec_cent)}' \
                 f' {np.mean(spec_bw)} {np.mean(rolloff)} {np.mean(zcr)}'
             for e in mfcc:
@@ -70,7 +72,7 @@ def main():
 
     results = model.evaluate(X_test, y_test)
 
-    model.save('genre_model.h5')
+    # model.save('genre_model.h5')
 
 
 if __name__ == "__main__":

@@ -1,6 +1,7 @@
 import winsound
 from tkinter import *
 
+from deep_learning.infer import Inference
 from utils.mp3_wav_util import mp3_to_wav
 from utils.upload_sound_file import let_user_select_file
 
@@ -20,14 +21,24 @@ class Gui:
 
         button1 = Button(self.topFrame, text="Selecteer Audiobestand", fg="green", command=self.recieve_user_sound_file)
         button1.pack()
+        button3 = Button(self.topFrame, text="Afspelen", fg="red", command=self.play)
+        button3.pack()
+        button3 = Button(self.topFrame, text="Stop", fg="red", command=self.stop)
+        button3.pack()
 
         self.label = Label(self.root, text="Huidig geselecteerd audiobestand: Geen")
         self.label.pack()
+
+        self.label2 = Label(self.root, text="Huidige prediction: Geen")
+        self.label2.pack()
 
         # init for vars
         self.current_sound_file = None
 
         self.root.protocol("WM_DELETE_WINDOW", self._delete_window)
+
+        # init for inference class
+        self.inference = Inference()
 
     def run(self):
         self.root.mainloop()
@@ -45,22 +56,24 @@ class Gui:
             new_text = "Huidig geselecteerd audiobestand: {}".format(split[len(split) - 1])
             self.label.config(text=new_text)
 
-            button3 = Button(self.topFrame, text="Afspelen", fg="red", command=self.play)
-            button3.pack()
-            button3 = Button(self.topFrame, text="Stop", fg="red", command=self.stop)
-            button3.pack()
-
         else:
             self.popupmsg("Selecteer een mp3 of een wav bestand.")
 
     def play(self):
-        winsound.PlaySound(self.current_sound_file, winsound.SND_ASYNC)
-
-    def stop(self):
-        winsound.PlaySound(None, winsound.SND_PURGE)
+        if self.current_sound_file is not None:
+            self.predict_and_show()
+            winsound.PlaySound(self.current_sound_file, winsound.SND_ASYNC)
 
     def _delete_window(self):
         self.root.destroy()
+        winsound.PlaySound(None, winsound.SND_PURGE)
+
+    def predict_and_show(self):
+        new_text = self.inference.infer(self.current_sound_file)
+        self.label2.config(text=new_text)
+
+    @staticmethod
+    def stop():
         winsound.PlaySound(None, winsound.SND_PURGE)
 
     @staticmethod
