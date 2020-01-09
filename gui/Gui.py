@@ -11,26 +11,25 @@ class Gui:
         # init for Gui
         self.root = Tk()
 
-        self.root.geometry("800x600")
+        # self.root.geometry("800x600")
         self.root.title("Muziek genre herkenner")
 
-        self.topFrame = Frame(self.root)
-        self.topFrame.pack()
-        self.bottomFrame = Frame(self.root)
-        self.bottomFrame.pack(side=BOTTOM)
-
-        button1 = Button(self.topFrame, text="Selecteer Audiobestand", fg="green", command=self.recieve_user_sound_file)
-        button1.pack()
-        button3 = Button(self.topFrame, text="Afspelen", fg="red", command=self.play)
-        button3.pack()
-        button3 = Button(self.topFrame, text="Stop", fg="red", command=self.stop)
-        button3.pack()
+        button = Button(self.root, text="Selecteer Audiobestand", fg="green", command=self.recieve_user_sound_file,
+                        width=22)
+        button.grid(row=0, column=0)
+        button2 = Button(self.root, text="Afspelen", fg="red", command=self.play, width=22)
+        button2.grid(row=0, column=1)
+        button3 = Button(self.root, text="Stop", fg="red", command=self.stop, width=22)
+        button3.grid(row=0, column=2)
 
         self.label = Label(self.root, text="Huidig geselecteerd audiobestand: Geen")
-        self.label.pack()
+        self.label.grid(row=2, column=1)
 
-        self.label2 = Label(self.root, text="Huidige prediction: Geen")
-        self.label2.pack()
+        self.text = Text(self.root)
+        self.text.insert('1.0', "Predictie")
+        self.text.grid(row=3, column=1)
+
+        self.root.grid()
 
         # init for vars
         self.current_sound_file = None
@@ -70,7 +69,11 @@ class Gui:
 
     def predict_and_show(self):
         new_text = self.inference.infer(self.current_sound_file)
-        self.label2.config(text=new_text)
+        self.text.delete('1.0', '10.0')
+
+        for x in new_text:
+            to_insert = (str(x[0]) + " " + str(x[1]))
+            self.text.insert('end', to_insert + '\n')
 
     @staticmethod
     def stop():
