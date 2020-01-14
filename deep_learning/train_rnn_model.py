@@ -5,7 +5,7 @@ import pickle
 import librosa
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 from deep_learning.model import get_rnn_model
 
@@ -49,9 +49,6 @@ def generate_taining_data():
 
                 data_list.append(np.array(sub_data_list))
 
-                # normaliseer elke specefieke waarde
-                librosa.util.normalize(data_list[-1], axis=0)
-
             dataset[0].append(np.array(data_list))
             dataset[1].append(np.array(y_list))
 
@@ -71,14 +68,25 @@ def main():
         dataset = pickle.load(filehandle)
 
     X, Y = dataset[0], dataset[1]
-    X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
 
+    # normalize de dataset
+    scaler_params = []
+    for i in range(25):
+        slice = X[:, :, i]
+        scaler = StandardScaler()
+        scaled_slice = scaler.fit_transform(slice)
+        X[:, :, i] = scaled_slice
+        scaler_params.append(scaler.get_params())
     model = get_rnn_model()
+
+    # Y = np.delete(Y, [1, 2, 3, 4, 5, 6, 7, 8, 9], axis=1)
+
+    X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
 
     history = model.fit(X_train,
                         y_train,
-                        epochs=10,
-                        batch_size=32)
+                        epochs=100,
+                        batch_size=64)
 
     results = model.evaluate(X_test, y_test)
 
