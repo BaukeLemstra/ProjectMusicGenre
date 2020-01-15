@@ -1,3 +1,6 @@
+import contextlib
+import wave
+
 from pydub import AudioSegment
 
 
@@ -11,3 +14,11 @@ def mp3_to_wav(file_path):
 
     sound.export(final_path, format="wav")
     return final_path
+
+
+def get_wav_length(fname):
+    with contextlib.closing(wave.open(fname, 'r')) as f:
+        frames = f.getnframes()
+        rate = f.getframerate()
+        duration = frames / float(rate)
+        return int(duration)

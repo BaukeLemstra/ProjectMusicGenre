@@ -17,9 +17,9 @@ def get_simple_model(input_shape):
     return model
 
 
-def get_rnn_model():
+def get_rnn_model(return_sequences=True):
     model = tf.keras.Sequential([
-        tf.keras.layers.LSTM(1024, return_sequences=True,
+        tf.keras.layers.LSTM(1024, return_sequences=return_sequences,
                              dropout=0.5,
                              recurrent_dropout=0.4,
                              ),

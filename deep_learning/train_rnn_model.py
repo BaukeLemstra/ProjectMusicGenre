@@ -60,7 +60,7 @@ def generate_taining_data():
         pickle.dump(dataset, filehandle)
 
 
-def main():
+def main(return_sequences=True):
     if not os.path.exists("rnn_dataset.data"):
         generate_taining_data()
 
@@ -70,16 +70,24 @@ def main():
     X, Y = dataset[0], dataset[1]
 
     # normalize de dataset
-    scaler_params = []
-    for i in range(25):
+    scalers = []
+    for i in range(26):
         slice = X[:, :, i]
         scaler = StandardScaler()
         scaled_slice = scaler.fit_transform(slice)
         X[:, :, i] = scaled_slice
-        scaler_params.append(scaler.get_params())
-    model = get_rnn_model()
+        scalers.append(scaler)
 
-    # Y = np.delete(Y, [1, 2, 3, 4, 5, 6, 7, 8, 9], axis=1)
+    # sla de scaler data op om tijdens inference de data op dezelfde manier te kunnen scalen
+    with open('saved_scalers.data', 'wb') as filehandle:
+        # store the data as binary data stream
+        pickle.dump(scalers, filehandle)
+
+    model = get_rnn_model(return_sequences=return_sequences)
+
+    # als de RNN niet een sequence aan data returned, moeten alle labels behavle de eerste weg
+    if not return_sequences:
+        Y = np.delete(Y, [1, 2, 3, 4, 5, 6, 7, 8, 9], axis=1)
 
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
 
