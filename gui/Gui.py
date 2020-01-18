@@ -13,10 +13,10 @@ class Gui:
         # self.root.geometry("800x600")
         self.root.title("Muziek genre herkenner")
 
-        button = Button(self.root, text="Selecteer Audiobestand", fg="green", command=self.recieve_user_sound_file,
+        button = Button(self.root, text="Selecteer Audiobestand", fg="purple", command=self.recieve_user_sound_file,
                         width=22)
         button.grid(row=0, column=0)
-        button2 = Button(self.root, text="Afspelen", fg="red", command=self.play, width=22)
+        button2 = Button(self.root, text="Afspelen en analyseren", fg="green", command=self.play, width=22)
         button2.grid(row=0, column=1)
         button3 = Button(self.root, text="Stop", fg="red", command=self.stop, width=22)
         button3.grid(row=0, column=2)
@@ -25,7 +25,7 @@ class Gui:
         self.label.grid(row=2, column=1)
 
         self.text = Text(self.root)
-        self.text.insert('1.0', "Predictie")
+        self.text.insert('1.0', "Selecteer een audiobestand")
         self.text.grid(row=3, column=1)
 
         self.root.grid()
@@ -43,10 +43,14 @@ class Gui:
         self.pred = None
         self.current_rnn_prediction = 0
 
+        self.current_after_job = None
+
     def run(self):
         self.root.mainloop()
 
     def recieve_user_sound_file(self):
+        self.stop()
+
         user_selected_file = let_user_select_file()
 
         if user_selected_file.endswith("mp3") or user_selected_file.endswith("wav"):
@@ -55,9 +59,7 @@ class Gui:
             if self.current_sound_file.endswith("mp3"):
                 self.current_sound_file = mp3_to_wav(self.current_sound_file)
 
-            split = self.current_sound_file.split("/")
-            new_text = "Huidig geselecteerd audiobestand: {}".format(split[len(split) - 1])
-            self.label.config(text=new_text)
+            self.update_selected_file_label()
 
         else:
             self.popupmsg("Selecteer een mp3 of een wav bestand.")
@@ -67,9 +69,19 @@ class Gui:
             self.predict_and_show()
             winsound.PlaySound(self.current_sound_file, winsound.SND_ASYNC)
 
-    def _delete_window(self):
-        self.root.destroy()
+    def stop(self, clear_prediction_field=True):
         winsound.PlaySound(None, winsound.SND_PURGE)
+        self.current_sound_file = None
+        self.current_rnn_prediction = 0
+
+        try:
+            self.root.after_cancel(self.current_after_job)
+
+        except ValueError:
+            pass
+
+        if clear_prediction_field:
+            self.clear_prediction_field()
 
     def predict_and_show(self, mode="rnn"):
         self.pred = self.inference.infer(self.current_sound_file)
@@ -80,21 +92,38 @@ class Gui:
             self.continuously_update_predict_window()
 
     def continuously_update_predict_window(self):
-        """ refresh the content of the label every second """
         # schrijf om de 3 seconden een nieuw deel van de prediction
-        self.draw_prediction(self.pred[self.current_rnn_prediction])
-        self.current_rnn_prediction += 1
-        self.root.after(3000, self.continuously_update_predict_window)
+        if self.current_rnn_prediction < len(self.pred):
+            self.draw_prediction(self.pred[self.current_rnn_prediction])
+            self.current_rnn_prediction += 1
+            if self.current_sound_file is not None:
+                self.current_after_job = self.root.after(3000, self.continuously_update_predict_window)
+        else:
+            self.stop(clear_prediction_field=False)
 
     def draw_prediction(self, pred):
         self.text.delete('1.0', '10.0')
 
         for x in pred:
             to_insert = (str(x[0]) + " " + str(x[1]))
+            to_insert = self.remove_garbage_from_string(to_insert)
             self.text.insert('end', to_insert + '\n')
 
-    @staticmethod
-    def stop():
+    def clear_prediction_field(self):
+        self.text.delete('1.0', '10.0')
+        self.text.insert('1.0', "Selecteer een audiobestand")
+
+    def update_selected_file_label(self):
+        split = self.current_sound_file.split("/")
+        new_text = "Huidig geselecteerd audiobestand: {}".format(split[len(split) - 1])
+        self.label.config(text=new_text)
+
+    def remove_garbage_from_string(self, string):
+        string = string.translate({ord(c): None for c in r"[]\/"})
+        return string
+
+    def _delete_window(self):
+        self.root.destroy()
         winsound.PlaySound(None, winsound.SND_PURGE)
 
     @staticmethod

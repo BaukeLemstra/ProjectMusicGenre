@@ -2,16 +2,12 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/deep_learning/model.py" line="7" />
-    <bookmark url="file://$PROJECT_DIR$/gui/Gui.py" line="18" />
+    <bookmark url="file://$PROJECT_DIR$/gui/Gui.py" line="17" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75fbf6f5-8b74-454d-b461-f3444966ac5a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deep_learning/infer.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_learning/infer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deep_learning/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_learning/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deep_learning/train_rnn_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep_learning/train_rnn_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/Gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/Gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/mp3_wav_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/mp3_wav_util.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,11 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deep_learning/train_rnn_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="89" column="61" lean-forward="true" selection-start-line="89" selection-start-column="61" selection-end-line="89" selection-end-column="61" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1360">
+              <caret line="89" column="61" selection-start-line="89" selection-start-column="61" selection-end-line="89" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -36,11 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deep_learning/infer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1048">
-              <caret line="123" column="27" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="69" column="36" lean-forward="true" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -48,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Anaconda3/envs/muziek/lib/site-packages/tensorflow_core/python/framework/ops.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
+            <state relative-caret-position="89165">
               <caret line="5300" selection-start-line="5300" selection-end-line="5300" />
             </state>
           </provider>
@@ -57,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui/Gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+            <state relative-caret-position="392">
+              <caret line="104" column="39" lean-forward="true" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -70,7 +60,7 @@
         <entry file="file://$USER_HOME$/Anaconda3/envs/muziek/lib/tkinter/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="369">
-              <caret line="748" selection-start-line="748" selection-end-line="748" />
+              <caret line="771" selection-start-line="771" selection-end-line="771" />
             </state>
           </provider>
         </entry>
@@ -115,11 +105,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1210" />
-    <option name="y" value="94" />
-    <option name="width" value="1003" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1273" />
+    <option name="width" value="1294" />
+    <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -127,6 +116,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -143,7 +133,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,7 +326,8 @@
       <workItem from="1578563436113" duration="5484000" />
       <workItem from="1578996565170" duration="10451000" />
       <workItem from="1579030304792" duration="11206000" />
-      <workItem from="1579076175426" duration="14875000" />
+      <workItem from="1579076175426" duration="15333000" />
+      <workItem from="1579314553397" duration="3773000" />
     </task>
     <task id="LOCAL-00001" summary="Gui fratsen en wat andere shit">
       <created>1576496749929</created>
@@ -416,23 +406,30 @@
       <option name="project" value="LOCAL" />
       <updated>1579043149290</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Werkende versie lstm model, supported in ui.">
+      <created>1579091287366</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1579091287366</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62022000" />
+    <option name="totallyTimeSpent" value="66253000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1236089" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21880065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32735777" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8748013" visible="true" weight="0.35307872" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.87599367" weight="0.08417771" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32667246" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8748013" visible="true" weight="0.30769232" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.87599367" weight="0.3588184" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -447,7 +444,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="SciView" order="4" visible="true" weight="0.03219396" />
+      <window_info anchor="right" id="SciView" order="4" visible="true" weight="0.024311183" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
@@ -467,7 +464,8 @@
     <MESSAGE value="eerste versie lstm model" />
     <MESSAGE value="tweede versie lstm model" />
     <MESSAGE value="Werkende versie lstm model, nog niet supported in UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Werkende versie lstm model, nog niet supported in UI" />
+    <MESSAGE value="Werkende versie lstm model, supported in ui." />
+    <option name="LAST_COMMIT_MESSAGE" value="Werkende versie lstm model, supported in ui." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -481,7 +479,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$main.coverage" NAME="main Coverage Results" MODIFIED="1579091185574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$main.coverage" NAME="main Coverage Results" MODIFIED="1579317714059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$upload_sound_file.coverage" NAME="upload_sound_file Coverage Results" MODIFIED="1576495077374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$train_rnn_model.coverage" NAME="train_rnn_model Coverage Results" MODIFIED="1579086737176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning" />
     <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$Gui.coverage" NAME="Gui Coverage Results" MODIFIED="1576581524392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -710,10 +708,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/muziek/lib/tkinter/__init__.py">
+    <entry file="file://$PROJECT_DIR$/deep_learning/train_rnn_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="748" selection-start-line="748" selection-end-line="748" />
+        <state relative-caret-position="1360">
+          <caret line="89" column="61" selection-start-line="89" selection-start-column="61" selection-end-line="89" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/muziek/lib/site-packages/tensorflow_core/python/framework/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89165">
+          <caret line="5300" selection-start-line="5300" selection-end-line="5300" />
         </state>
       </provider>
     </entry>
@@ -724,37 +729,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deep_learning/train_rnn_model.py">
+    <entry file="file://$USER_HOME$/Anaconda3/envs/muziek/lib/tkinter/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="89" column="61" lean-forward="true" selection-start-line="89" selection-start-column="61" selection-end-line="89" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="369">
+          <caret line="771" selection-start-line="771" selection-end-line="771" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/deep_learning/infer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1048">
-          <caret line="123" column="27" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/muziek/lib/site-packages/tensorflow_core/python/framework/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="5300" selection-start-line="5300" selection-end-line="5300" />
+        <state relative-caret-position="272">
+          <caret line="69" column="36" lean-forward="true" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/Gui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+        <state relative-caret-position="392">
+          <caret line="104" column="39" lean-forward="true" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
