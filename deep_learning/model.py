@@ -20,10 +20,11 @@ def get_simple_model(input_shape):
 def get_rnn_model(return_sequences=True):
     model = tf.keras.Sequential([
         tf.keras.layers.LSTM(1024, return_sequences=return_sequences,
-                             dropout=0.5,
-                             recurrent_dropout=0.4,
+                             dropout=0.4,
+                             recurrent_dropout=0.0,
                              ),
         tf.keras.layers.Dense(512, activation='relu'),
+        tf.keras.layers.Dropout(rate=0.2),
         tf.keras.layers.Dense(10, activation='softmax')])
 
     model.compile(optimizer=tf.keras.optimizers.Adam(0.01),

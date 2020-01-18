@@ -29,21 +29,20 @@ class Gui:
         self.text.grid(row=3, column=1)
 
         self.root.grid()
+        self.root.protocol("WM_DELETE_WINDOW", self._delete_window)
 
         # init for vars
         self.current_sound_file = None
-
-        self.root.protocol("WM_DELETE_WINDOW", self._delete_window)
+        self.playing = True
+        self.current_after_job = None
+        self.pred = None
+        self.current_rnn_prediction = 0
 
         # init for inference class
         if model_type == "simple":
             self.inference = SimpleInference()
         elif model_type == "rnn":
             self.inference = RnnInference()
-        self.pred = None
-        self.current_rnn_prediction = 0
-
-        self.current_after_job = None
 
     def run(self):
         self.root.mainloop()
@@ -65,12 +64,16 @@ class Gui:
             self.popupmsg("Selecteer een mp3 of een wav bestand.")
 
     def play(self):
-        if self.current_sound_file is not None:
-            self.predict_and_show()
-            winsound.PlaySound(self.current_sound_file, winsound.SND_ASYNC)
+        if not self.playing:
+            self.playing = True
+            if self.current_sound_file is not None:
+                self.predict_and_show()
+                winsound.PlaySound(self.current_sound_file, winsound.SND_ASYNC)
 
     def stop(self, clear_prediction_field=True):
         winsound.PlaySound(None, winsound.SND_PURGE)
+
+        self.playing = False
         self.current_sound_file = None
         self.current_rnn_prediction = 0
 
