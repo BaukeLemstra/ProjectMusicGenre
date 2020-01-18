@@ -2,7 +2,7 @@ import winsound
 from tkinter import *
 
 from deep_learning.infer import SimpleInference, RnnInference
-from utils.mp3_wav_util import mp3_to_wav
+from utils.mp3_wav_util import mp3_to_wav, get_wav_length
 from utils.upload_sound_file import let_user_select_file
 
 
@@ -52,7 +52,9 @@ class Gui:
 
         user_selected_file = let_user_select_file()
 
-        if user_selected_file.endswith("mp3") or user_selected_file.endswith("wav"):
+        if user_selected_file.endswith("mp3") or user_selected_file.endswith("wav") \
+                and get_wav_length(user_selected_file) >= 30:
+
             self.current_sound_file = user_selected_file
 
             if self.current_sound_file.endswith("mp3"):
@@ -61,7 +63,7 @@ class Gui:
             self.update_selected_file_label()
 
         else:
-            self.popupmsg("Selecteer een mp3 of een wav bestand.")
+            self.popupmsg("Selecteer een mp3 of een wav bestand van tenminste 30 seconden.")
 
     def play(self):
         if not self.playing:
