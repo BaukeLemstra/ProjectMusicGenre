@@ -8,9 +8,7 @@ from utils.upload_sound_file import let_user_select_file
 
 class Gui:
     def __init__(self, model_type="rnn"):
-        # init for Gui
         self.root = Tk()
-        # self.root.geometry("800x600")
         self.root.title("Muziek genre herkenner")
 
         button = Button(self.root, text="Selecteer Audiobestand", fg="purple", command=self.recieve_user_sound_file,

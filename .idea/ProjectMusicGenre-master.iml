@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/deep_learning/MIR" />
+      <excludeFolder url="file://$MODULE_DIR$/deep_learning/fma" />
       <excludeFolder url="file://$MODULE_DIR$/wav_files" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (muziek)" jdkType="Python SDK" />
