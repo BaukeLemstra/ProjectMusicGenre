@@ -32,7 +32,10 @@ def generate_taining_data():
     encoder.fit(CLASSES)
 
     total_errors = 0
-    for track_id, genre in y_small.iteritems():
+    for count, (track_id, genre) in enumerate(y_small.iteritems()):
+
+        if count > 1000:
+            break
 
         mp3_filename = utils.get_audio_path(AUDIO_DIR, track_id)[1:]
 

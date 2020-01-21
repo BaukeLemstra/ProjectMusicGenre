@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deep_learning/train_rnn_model.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/deep_learning/train_rnn_model_fma.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            <state relative-caret-position="202">
+              <caret line="91" column="26" lean-forward="true" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -29,14 +29,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/deep_learning/train_rnn_model_fma.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/Gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="63" column="70" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
+            <state relative-caret-position="-1105">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deep_learning/infer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -46,15 +55,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda3/envs/muziek/lib/site-packages/soundfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20043">
-              <caret line="1183" selection-start-line="1183" selection-end-line="1183" />
             </state>
           </provider>
         </entry>
@@ -144,11 +144,11 @@
         <option value="$PROJECT_DIR$/deep_learning/train_simple_model.py" />
         <option value="$PROJECT_DIR$/utils/mp3_wav_util.py" />
         <option value="$PROJECT_DIR$/deep_learning/train_rnn_model.py" />
-        <option value="$PROJECT_DIR$/deep_learning/infer.py" />
-        <option value="$PROJECT_DIR$/gui/Gui.py" />
         <option value="$PROJECT_DIR$/thirdparty/utils.py" />
         <option value="$PROJECT_DIR$/deep_learning/fma/convert_to_subdirs.py" />
         <option value="$PROJECT_DIR$/deep_learning/model.py" />
+        <option value="$PROJECT_DIR$/deep_learning/infer.py" />
+        <option value="$PROJECT_DIR$/gui/Gui.py" />
         <option value="$PROJECT_DIR$/deep_learning/train_rnn_model_fma.py" />
       </list>
     </option>
@@ -176,6 +176,11 @@
               <item name="ProjectMusicGenre-master" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="S:\projects\ProjectMusicGenre-master" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="deep_learning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ProjectMusicGenre-master" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="S:\projects\ProjectMusicGenre-master" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="gui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="ProjectMusicGenre-master" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -388,7 +393,7 @@
       <workItem from="1579516608507" duration="615000" />
       <workItem from="1579517243253" duration="7666000" />
       <workItem from="1579593839987" duration="2285000" />
-      <workItem from="1579596154230" duration="1841000" />
+      <workItem from="1579596154230" duration="4573000" />
     </task>
     <task id="LOCAL-00001" summary="Gui fratsen en wat andere shit">
       <created>1576496749929</created>
@@ -509,11 +514,25 @@
       <option name="project" value="LOCAL" />
       <updated>1579595448865</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Conversie en train script geupdate, runt nu maar duurt lang">
+      <created>1579598020897</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1579598020897</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Inference en model geupdate voor FMA ondersteuning, nog niet getest">
+      <created>1579598670307</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1579598670307</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86809000" />
+    <option name="totallyTimeSpent" value="89541000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -524,15 +543,15 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32667246" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6351351" visible="true" weight="0.3655495" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.87559617" weight="0.45830086" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49960256" weight="0.111872144" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.36486486" side_tool="true" visible="true" weight="0.3655495" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6351351" visible="true" weight="0.69914263" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49960256" weight="0.111872144" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.36486486" side_tool="true" visible="true" weight="0.69914263" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.36486486" side_tool="true" weight="0.69914263" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.26734218" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.125" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32969603" />
@@ -591,7 +610,9 @@
     <MESSAGE value="Fix voor het opnenen van sub 30 seconden bestanden" />
     <MESSAGE value="Nieuwe shit voor nieuwe dataset" />
     <MESSAGE value="Eerste versie dataset creation + train script voor FMA dataset" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eerste versie dataset creation + train script voor FMA dataset" />
+    <MESSAGE value="Conversie en train script geupdate, runt nu maar duurt lang" />
+    <MESSAGE value="Inference en model geupdate voor FMA ondersteuning, nog niet getest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inference en model geupdate voor FMA ondersteuning, nog niet getest" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -601,7 +622,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/deep_learning/infer.py</url>
-          <line>103</line>
+          <line>113</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -621,7 +642,7 @@
     <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$convert_to_subdirs.coverage" NAME="convert_to_subdirs Coverage Results" MODIFIED="1579594191301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning/fma" />
     <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$AudioController.coverage" NAME="AudioController Coverage Results" MODIFIED="1576585317176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$train.coverage" NAME="train Coverage Results" MODIFIED="1578394307715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning" />
-    <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$train_rnn_model_fma.coverage" NAME="train_rnn_model_fma Coverage Results" MODIFIED="1579597966600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning" />
+    <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$train_rnn_model_fma.coverage" NAME="train_rnn_model_fma Coverage Results" MODIFIED="1579598884965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -864,13 +885,6 @@ codecs.unicode_escape_decode(mp3_filename)</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deep_learning/infer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="45" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/muziek/lib/site-packages/sklearn/preprocessing/data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12648">
@@ -882,13 +896,6 @@ codecs.unicode_escape_decode(mp3_filename)</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89165">
           <caret line="5300" selection-start-line="5300" selection-end-line="5300" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/Gui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="102" column="58" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -975,10 +982,27 @@ codecs.unicode_escape_decode(mp3_filename)</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/deep_learning/infer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/Gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1105">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/deep_learning/train_rnn_model_fma.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="63" column="70" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
+        <state relative-caret-position="202">
+          <caret line="91" column="26" lean-forward="true" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
