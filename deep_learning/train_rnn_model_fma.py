@@ -44,7 +44,6 @@ def generate_taining_data():
         logger.info("Now handling {}".format(mp3_filename))
 
         try:
-
             for i in range(10):
                 sub_data_list = []
                 y, sr = librosa.load(mp3_filename, mono=True, duration=3, offset=i * 3)

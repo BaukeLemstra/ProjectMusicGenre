@@ -7,7 +7,7 @@ from utils.upload_sound_file import let_user_select_file
 
 
 class Gui:
-    def __init__(self, model_type="rnn"):
+    def __init__(self, model_type="rnn_fma"):
         self.root = Tk()
         self.root.title("Muziek genre herkenner")
 
@@ -41,6 +41,8 @@ class Gui:
             self.inference = SimpleInference()
         elif model_type == "rnn":
             self.inference = RnnInference()
+        elif model_type == "rnn_fma":
+            self.inference = RnnInference(fma=True)
 
     def run(self):
         self.root.mainloop()

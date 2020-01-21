@@ -59,9 +59,15 @@ class SimpleInference:
 
 
 class RnnInference:
-    def __init__(self):
-        self.model = tf.keras.models.load_model(
-            "deep_learning/models/rnn_model.h5")
+    def __init__(self, fma=False):
+        if fma:
+            self.model = tf.keras.models.load_model(
+                "deep_learning/models/rnn_model_fma.h5")
+        else:
+            self.model = tf.keras.models.load_model(
+                "deep_learning/models/rnn_model.h5")
+
+        self.fma = fma
 
     def infer(self, path_to_file):
         data_list = []
@@ -87,8 +93,12 @@ class RnnInference:
 
         data_list = np.array(data_list)
 
-        with open('deep_learning/saved_scalers.data', 'rb') as filehandle:
-            scaler_params = pickle.load(filehandle)
+        if self.fma:
+            with open('deep_learning/saved_scalers_fma.data', 'rb') as filehandle:
+                scaler_params = pickle.load(filehandle)
+        else:
+            with open('deep_learning/saved_scalers.data', 'rb') as filehandle:
+                scaler_params = pickle.load(filehandle)
 
         data_list = np.expand_dims(data_list, axis=0)
 
