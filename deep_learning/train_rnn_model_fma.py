@@ -2,10 +2,12 @@ import logging
 import os
 import pickle
 
+import librosa
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, LabelEncoder
 
+import thirdparty.utils as utils  # note my fix to fma utils, https://github.com/mdeff/fma/issues/34
 from deep_learning.model import get_rnn_model
 
 logger = logging.getLogger("logger")
@@ -13,41 +15,72 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 def generate_taining_data():
-    import os
-    import librosa
+    AUDIO_DIR = 'deep_learning/fma/fma_medium'
 
-    import thirdparty.utils as utils  # note my fix to fma utils, https://github.com/mdeff/fma/issues/34
+    tracks = utils.load('deep_learning/fma/tracks.csv')
 
-    AUDIO_DIR = 'fma_medium/'
-    tracks = utils.load('tracks.csv')
-    base_dir = "Samples_medium/"
+    medium = tracks['set', 'subset'] <= 'medium'
 
-    os.mkdir(base_dir[:-1])
+    y_small = tracks.loc[medium, ('track', 'genre_top')]
 
-    small = tracks['set', 'subset'] <= 'medium'
+    CLASSES = ['Blues', 'Classical', 'Country', 'Easy Listening', 'Electronic',
+               'Experimental', 'Folk', 'Hip-Hop', 'Instrumental', 'International',
+               'Jazz', 'Old-Time / Historic', 'Pop', 'Rock', 'Soul-RnB', 'Spoken']
 
-    y_small = tracks.loc[small, ('track', 'genre_top')]
+    dataset = [[], []]
 
-    sr = 44100
+    encoder = LabelEncoder()
+    encoder.fit(CLASSES)
+
+    total_errors = 0
     for track_id, genre in y_small.iteritems():
-        if not os.path.exists(base_dir + genre):
-            os.mkdir(base_dir + genre)
 
         mp3_filename = utils.get_audio_path(AUDIO_DIR, track_id)
-        out_wav_filename = base_dir + genre + '/' + str(track_id) + '.wav'
 
-        print("reading ", mp3_filename)
-        data, sr = librosa.load(mp3_filename, sr=sr, mono=True)
+        try:
+            print("reading ", mp3_filename)
 
-        print("writing ", out_wav_filename)
-        librosa.output.write_wav(out_wav_filename, data, sr=sr)
+            data_list = []
+
+            encoded_label = encoder.transform([genre])[0]
+            y_list = [encoded_label] * 10
+
+            for i in range(10):
+                sub_data_list = []
+                y, sr = librosa.load(mp3_filename, mono=True, duration=3, offset=i * 3)
+                sub_data_list.append(np.mean(librosa.feature.chroma_stft(y=y, sr=sr)))
+                sub_data_list.append(np.mean(librosa.feature.spectral_centroid(y=y, sr=sr)))
+                sub_data_list.append(np.mean(librosa.feature.spectral_bandwidth(y=y, sr=sr)))
+                sub_data_list.append(np.mean(librosa.feature.spectral_rolloff(y=y, sr=sr)))
+                sub_data_list.append(np.mean(librosa.feature.zero_crossing_rate(y)))
+                sub_data_list.append(np.mean(librosa.feature.rms(y=y)))
+                mfcc = librosa.feature.mfcc(y=y, sr=sr)
+                for e in mfcc:
+                    sub_data_list.append(np.mean(e))
+
+                data_list.append(np.array(sub_data_list))
+
+            dataset[0].append(np.array(data_list))
+            dataset[1].append(np.array(y_list))
+
+        except:
+            total_errors += 1
+
+    dataset[0] = np.array(dataset[0])
+    dataset[1] = np.array(dataset[1])
+
+    logger.info(str(total_errors))
+
+    with open('rnn_dataset_fma.data', 'wb') as filehandle:
+        # store the data as binary data stream
+        pickle.dump(dataset, filehandle)
 
 
 def main(return_sequences=True):
-    if not os.path.exists("rnn_dataset.data"):
+    if not os.path.exists("rnn_dataset_fma.data"):
         generate_taining_data()
 
-    with open('rnn_dataset.data', 'rb') as filehandle:
+    with open('rnn_dataset_fma.data', 'rb') as filehandle:
         dataset = pickle.load(filehandle)
 
     X, Y = dataset[0], dataset[1]
@@ -62,11 +95,11 @@ def main(return_sequences=True):
         scalers.append(scaler)
 
     # sla de scaler data op om tijdens inference de data op dezelfde manier te kunnen scalen
-    with open('saved_scalers.data', 'wb') as filehandle:
+    with open('saved_scalers_fma.data', 'wb') as filehandle:
         # store the data as binary data stream
         pickle.dump(scalers, filehandle)
 
-    model = get_rnn_model(return_sequences=return_sequences)
+    model = get_rnn_model(return_sequences=return_sequences, classes=16)
 
     # als de RNN niet een sequence aan data returned, moeten alle labels behavle de eerste weg
     if not return_sequences:
@@ -81,7 +114,7 @@ def main(return_sequences=True):
 
     results = model.evaluate(X_test, y_test)
 
-    model.save('models/rnn_model.h5')
+    model.save('models/rnn_model_fma.h5')
 
 
 if __name__ == "__main__":
