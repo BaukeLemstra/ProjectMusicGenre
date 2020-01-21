@@ -15,12 +15,11 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 def generate_taining_data():
-    AUDIO_DIR = 'deep_learning/fma/fma_medium'
+    AUDIO_DIR = '.fma/fma_medium'
 
-    tracks = utils.load('deep_learning/fma/tracks.csv')
+    tracks = utils.load("./fma/tracks.csv")
 
     medium = tracks['set', 'subset'] <= 'medium'
-
     y_small = tracks.loc[medium, ('track', 'genre_top')]
 
     CLASSES = ['Blues', 'Classical', 'Country', 'Easy Listening', 'Electronic',
@@ -35,15 +34,16 @@ def generate_taining_data():
     total_errors = 0
     for track_id, genre in y_small.iteritems():
 
-        mp3_filename = utils.get_audio_path(AUDIO_DIR, track_id)
+        mp3_filename = utils.get_audio_path(AUDIO_DIR, track_id)[1:]
+
+        data_list = []
+
+        encoded_label = encoder.transform([genre])[0]
+        y_list = [encoded_label] * 10
+
+        logger.info("Now handling {}".format(mp3_filename))
 
         try:
-            print("reading ", mp3_filename)
-
-            data_list = []
-
-            encoded_label = encoder.transform([genre])[0]
-            y_list = [encoded_label] * 10
 
             for i in range(10):
                 sub_data_list = []
@@ -60,11 +60,13 @@ def generate_taining_data():
 
                 data_list.append(np.array(sub_data_list))
 
-            dataset[0].append(np.array(data_list))
-            dataset[1].append(np.array(y_list))
-
         except:
+            logger.info("error occured in file {}".format(mp3_filename))
             total_errors += 1
+            continue
+
+        dataset[0].append(np.array(data_list))
+        dataset[1].append(np.array(y_list))
 
     dataset[0] = np.array(dataset[0])
     dataset[1] = np.array(dataset[1])
