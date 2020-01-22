@@ -20,11 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deep_learning/train_rnn_model_fma.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="91" column="26" lean-forward="true" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="867">
+              <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -32,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui/Gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1105">
+            <state relative-caret-position="68">
               <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -44,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deep_learning/infer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="901">
               <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
             </state>
           </provider>
@@ -71,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thirdparty/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
+            <state relative-caret-position="3638">
               <caret line="225" selection-start-line="225" selection-end-line="225" />
             </state>
           </provider>
@@ -154,10 +151,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="-24" />
-    <option name="width" value="2498" />
-    <option name="height" value="1259" />
+    <option name="x" value="-7" />
+    <option name="width" value="1934" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -176,6 +172,12 @@
               <item name="ProjectMusicGenre-master" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="S:\projects\ProjectMusicGenre-master" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="deep_learning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ProjectMusicGenre-master" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="S:\projects\ProjectMusicGenre-master" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="deep_learning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="fma" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="ProjectMusicGenre-master" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -393,7 +395,8 @@
       <workItem from="1579516608507" duration="615000" />
       <workItem from="1579517243253" duration="7666000" />
       <workItem from="1579593839987" duration="2285000" />
-      <workItem from="1579596154230" duration="4573000" />
+      <workItem from="1579596154230" duration="5234000" />
+      <workItem from="1579645537167" duration="6396000" />
     </task>
     <task id="LOCAL-00001" summary="Gui fratsen en wat andere shit">
       <created>1576496749929</created>
@@ -528,31 +531,37 @@
       <option name="project" value="LOCAL" />
       <updated>1579598670307</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="subset">
+      <created>1579602511057</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1579602511057</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89541000" />
+    <option name="totallyTimeSpent" value="96598000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1934" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18004769" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24439701" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32667246" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6351351" visible="true" weight="0.69914263" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3257989" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.63500535" visible="true" weight="0.38512036" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49960256" weight="0.111872144" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.36486486" side_tool="true" visible="true" weight="0.69914263" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.36499467" side_tool="true" weight="0.3900325" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.36486486" side_tool="true" weight="0.69914263" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.26734218" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.2665222" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.125" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32969603" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -612,7 +621,8 @@
     <MESSAGE value="Eerste versie dataset creation + train script voor FMA dataset" />
     <MESSAGE value="Conversie en train script geupdate, runt nu maar duurt lang" />
     <MESSAGE value="Inference en model geupdate voor FMA ondersteuning, nog niet getest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inference en model geupdate voor FMA ondersteuning, nog niet getest" />
+    <MESSAGE value="subset" />
+    <option name="LAST_COMMIT_MESSAGE" value="subset" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -642,7 +652,7 @@
     <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$convert_to_subdirs.coverage" NAME="convert_to_subdirs Coverage Results" MODIFIED="1579594191301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning/fma" />
     <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$AudioController.coverage" NAME="AudioController Coverage Results" MODIFIED="1576585317176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$train.coverage" NAME="train Coverage Results" MODIFIED="1578394307715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning" />
-    <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$train_rnn_model_fma.coverage" NAME="train_rnn_model_fma Coverage Results" MODIFIED="1579598884965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning" />
+    <SUITE FILE_PATH="coverage/ProjectMusicGenre_master$train_rnn_model_fma.coverage" NAME="train_rnn_model_fma Coverage Results" MODIFIED="1579645673774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deep_learning" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -933,10 +943,48 @@ codecs.unicode_escape_decode(mp3_filename)</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/deep_learning/train_rnn_model_fma.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/Gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep_learning/infer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep_learning/train_simple_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/muziek/lib/site-packages/librosa/core/audio.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1904">
           <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thirdparty/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3638">
+          <caret line="225" selection-start-line="225" selection-end-line="225" />
         </state>
       </provider>
     </entry>
@@ -965,47 +1013,6 @@ codecs.unicode_escape_decode(mp3_filename)</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deep_learning/train_simple_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thirdparty/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="225" selection-start-line="225" selection-end-line="225" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deep_learning/infer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/Gui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1105">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deep_learning/train_rnn_model_fma.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="91" column="26" lean-forward="true" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
