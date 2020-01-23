@@ -7,7 +7,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
-import thirdparty.utils as utils  # note my fix to fma utils, https://github.com/mdeff/fma/issues/34
+import thirdparty.utils as utils
 from deep_learning.model import get_rnn_model
 
 logger = logging.getLogger("logger")
